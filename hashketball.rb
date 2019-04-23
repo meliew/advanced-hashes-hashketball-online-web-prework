@@ -163,6 +163,7 @@ end
 
 
 def player_stats(player_name)
+  stats = {}
 end
 
 #Build a method, `player_numbers`, that takes in an argument of a team name and returns an array of the jersey number's for that team.
