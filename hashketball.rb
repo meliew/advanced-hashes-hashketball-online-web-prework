@@ -144,11 +144,9 @@ end
 
 
 def team_names
-  names = []
-  game_hash.each do |home_or_away, details|
-    names << details[:team_name]
+  game_hash.collect do |home_or_away, details|
+    details[:team_name]
   end
-  return names 
 end
 
 def player_numbers(team_name)
