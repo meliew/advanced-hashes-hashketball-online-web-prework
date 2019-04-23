@@ -1,3 +1,4 @@
+require pry
 def game_hash
   the_game_hash = {
     :home => {
