@@ -176,18 +176,23 @@ def player_stats(player_name)
   output
 end
 
-def big_shoe_rebounds
-  bigfoot = {shoe: 0}
-  game_hash.each do |home_or_away, details|
-    details[:players].each do |name, stats|
-      if stats[:shoe] > bigfoot[:shoe]
-        bigfoot = stats
-      end
-    end
-  end
-  bigfoot[:rebounds]
 
+def big_shoe_rebounds
+  
 end
+
+# def big_shoe_rebounds
+#   bigfoot = {shoe: 0}
+#   game_hash.each do |home_or_away, details|
+#     details[:players].each do |name, stats|
+#       if stats[:shoe] > bigfoot[:shoe]
+#         bigfoot = stats
+#       end
+#     end
+#   end
+#   bigfoot[:rebounds]
+
+
 
 #Build a method, `player_numbers`, that takes in an argument of a team name and returns an array of the jersey number's for that team.
 # Build a method, `player_stats`, that takes in an argument of a player's name and returns a hash of that player's stats.
