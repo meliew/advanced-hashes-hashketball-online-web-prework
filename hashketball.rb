@@ -187,6 +187,7 @@ def big_shoe_rebounds
   players.sort_by! do |player|
     player[:shoe]
   end
+  players[-1][:rebounds]
 end
 
 # def big_shoe_rebounds
