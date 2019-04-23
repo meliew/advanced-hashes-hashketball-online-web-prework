@@ -150,15 +150,14 @@ def team_names
 end
 
 def player_numbers(team_name)
-  numbers = []
   game_hash.each do |home_or_away, details|
     if details[:team_name] == team_name
-      details[:players].each do |name, stats|
-        numbers << stats[:number]
+      details[:players].collect do |name, stats|
+         stats[:number]
       end
     end
   end
-  numbers
+
 end
 
 
