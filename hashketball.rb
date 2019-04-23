@@ -164,6 +164,13 @@ end
 
 def player_stats(player_name)
   output = {}
+  game_hash.each do |home_or_away, details|
+    details[:players].each do |name, stats|
+      if name == player_name 
+        output = stats
+      end
+    end
+  end
 end
 
 #Build a method, `player_numbers`, that takes in an argument of a team name and returns an array of the jersey number's for that team.
