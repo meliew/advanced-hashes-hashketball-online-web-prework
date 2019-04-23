@@ -175,8 +175,13 @@ def player_stats(player_name)
 end
 
 def big_shoe_rebounds
-  bigfoot = { }
+  bigfoot = {shoe: 0}
   game_hash.each do |home_or_away, details|
+    details.each do |name, stats|
+      if stats[:shoe] > bigfoot[:shoe]
+        bigfoot = stats
+      end
+    end
   end
 end
 
